@@ -18,20 +18,24 @@ int main()
   cin>>numRows;
   cin>>numCols;
 
-  starMatrix.resize(numRows);
-
-  for (int i = 0; i < numRows; i++)
+  if ((numRows > 0) && (numCols > 0))
   {
-    starMatrix[i].resize(numCols);
-    for (int j = 0; j < numCols; j++)
-      starMatrix[i][j] = '*';
-  }
 
-  for (int i = 0; i < numRows; i++)
-  {
-    for (int j = 0; j < numCols; j++)
-      cout<<starMatrix[i][j];
-    cout<<endl;
+    starMatrix.resize(numRows);
+
+    for (int i = 0; i < numRows; i++)
+    {
+      starMatrix[i].resize(numCols);
+      for (int j = 0; j < numCols; j++)
+        starMatrix[i][j] = '*';
+    }
+
+    for (int i = 0; i < numRows; i++)
+    {
+      for (int j = 0; j < numCols; j++)
+        cout<<starMatrix[i][j];
+      cout<<endl;
+    }
   }
 
   return 0;
